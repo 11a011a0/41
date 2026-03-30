@@ -1,5 +1,5 @@
 /* ==========================================================
-   The 661 Estate — Luxury Theme
+   41 Villa — Luxury Theme
    White + Champagne Gold, Animations, Responsive
    ========================================================== */
 
@@ -539,6 +539,39 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.8;
 }
 
+.experience__grid--prose {
+  grid-template-columns: 1fr;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.experience__grid--prose .experience__copy {
+  gap: 1.35rem;
+}
+
+.experience__pullquote {
+  font-family: var(--font);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.65;
+  margin-top: 0.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.experience__bullets {
+  margin-top: 0.25rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+
+.experience__bullets li { margin-bottom: 0.35rem; }
+
 .experience__image img {
   width: 100%;
   aspect-ratio: 4/3;
@@ -626,6 +659,35 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.5;
 }
 
+/* Text-only level blocks (no photography) */
+.level--text-only {
+  grid-template-columns: clamp(5.5rem, 16vw, 8rem) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.level--text-only .level__body {
+  max-width: 52rem;
+}
+
+.level--text-only .level__label {
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  opacity: 1;
+  line-height: 1.45;
+  padding-top: 0.45rem;
+}
+
+.level--text-only .level__title {
+  margin-bottom: 1rem;
+}
+
+.level--text-only .level__desc + .level__desc {
+  margin-top: 0.85rem;
+}
+
 /* ── HIGHLIGHTS ── */
 .highlights__grid {
   display: grid;
@@ -667,6 +729,39 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+/* ── FILM (embedded video) ── */
+.film__frame {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.film__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.film__caption {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+  text-align: center;
+  max-width: 52ch;
+  margin-inline: auto;
+  line-height: 1.65;
 }
 
 /* ── GALLERY ── */
@@ -932,6 +1027,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .level {
     grid-template-columns: 64px 1fr;
     grid-template-rows: auto auto;
+  }
+
+  .level--text-only {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .level--text-only .level__label {
+    padding-top: 0;
   }
 
   .level__image { grid-column: 1 / -1; }

@@ -1,5 +1,5 @@
 /* ==========================================================
-   The 661 Estate — app.js
+   41 Villa — app.js
    WhatsApp CTA · Hero Slideshow · Reveal-on-Scroll
    Gallery Lightbox · Mobile Nav Drawer
    ========================================================== */
@@ -9,7 +9,7 @@
 
   /* ── CONFIG ──────────────────────────────────────────── */
   var WA_NUMBER  = '6583999686';
-  var WA_MESSAGE = 'Hi! I\u2019m interested in arranging a private viewing for The 661 Estate \u2014 ultra-luxury 5-storey home with private lift, full-floor entertainment deck, and MBS\u2002&\u2002city skyline views. Could you please share available time slots? PropertyGuru: https://www.propertyguru.com.sg/listing/for-sale-ultra-luxury-5-storey-home-lift-mbs-views-entertainment-5-parking-500082466';
+  var WA_MESSAGE = 'Hi! I\u2019m interested in arranging a private viewing for 41 Villa \u2014 neoclassical detached home on the East Coast with pool, columned facade, and generous indoor-outdoor living. Could you please share available time slots? PropertyGuru: https://www.propertyguru.com.sg/listing/for-sale-neoclassical-detached-home-500083416';
   var WA_HREF    = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(WA_MESSAGE);
 
   var SLIDE_INTERVAL = 5500; // ms between hero slide transitions

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="You're invited — The 661 Estate" />
-  <title>You're Invited — The 661 Estate</title>
+  <meta name="description" content="You're invited — 41 Villa" />
+  <title>You're Invited — 41 Villa</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +46,7 @@
     /* ── BACKGROUND ── */
     .bg-image {
       position: fixed; inset: 0; z-index: 0;
-      background-image: url('https://sg1-cdn.pgimgs.com/listing/500082466/UPHO.159005248.V800/Ultra-Luxury-5-Storey-Home-lift-Mbs-Views-Entertainment-5-Parking-Eunos-Geylang-Paya-Lebar-Singapore.jpg');
+      background-image: url('https://sg1-cdn.pgimgs.com/listing/500083416/UPHO.159113444.V800/Neoclassical-Detached-Home-East-Coast-Marine-Parade-Singapore.jpg');
       background-size: cover; background-position: center;
       filter: brightness(0.22) saturate(0.6);
     }
@@ -255,9 +255,9 @@
 
   <main class="page" id="invitePage" role="main" style="display:none">
 
-    <a class="brand" href="../" aria-label="The 661 Estate — return home">
+    <a class="brand" href="../" aria-label="41 Villa — return home">
       <span class="brand__diamond" aria-hidden="true"></span>
-      <span>The 661 Estate</span>
+      <span>41 Villa</span>
     </a>
 
     <article class="invite-card" id="inviteCard">
@@ -289,7 +289,7 @@
             </svg>
             <div>
               <p class="meta-label">Venue</p>
-              <p class="meta-value">The 661 Estate, Singapore</p>
+              <p class="meta-value">41 Villa — 41 Lorong H Telok Kurau, Singapore 426034</p>
             </div>
           </div>
         </div>
@@ -310,7 +310,7 @@
 
       <!-- Google Maps -->
       <a class="btn btn-maps" id="btnMaps"
-         href="https://maps.google.com/?q=661+Changi+Road+Singapore+419952"
+         href="https://maps.google.com/?q=41+Lorong+H+Telok+Kurau,+Singapore+426034"
          target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -345,7 +345,7 @@
 
     <div class="footer-brand">
       <p>
-        Hosted at <a href="../specifications/">The 661 Estate</a>
+        Hosted at <a href="../specifications/">41 Villa</a>
         &nbsp;·&nbsp; Singapore
       </p>
     </div>
@@ -392,14 +392,14 @@
     document.getElementById('cardDate').textContent = dateStr;
 
     /* ── PAGE TITLE ── */
-    document.title = payload.t + ' — The 661 Estate';
+    document.title = payload.t + ' — 41 Villa';
 
     /* ── WHATSAPP RSVP ── */
     var phone = payload.p || '6583999686';
     // Sanitize: digits only
     phone = phone.replace(/\D/g, '');
 
-    var waMsg = 'Hi! I received your invite to "' + payload.t + '" at The 661 Estate on ' +
+    var waMsg = 'Hi! I received your invite to "' + payload.t + '" at 41 Villa on ' +
                 dateStr + '. I\u2019d love to attend — please count me in! 🎉';
     var waUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(waMsg);
     document.getElementById('btnRsvp').setAttribute('href', waUrl);
@@ -419,8 +419,8 @@
     var gcalUrl = 'https://www.google.com/calendar/render?action=TEMPLATE' +
       '&text=' + encodeURIComponent(payload.t) +
       '&dates=' + toGCalDate(eventDate) + '/' + toGCalDate(endDate) +
-      '&details=' + encodeURIComponent((payload.d || '') + '\n\nHosted at The 661 Estate, Singapore.') +
-      '&location=' + encodeURIComponent('The 661 Estate, 661 Changi Road, Singapore 419952') +
+      '&details=' + encodeURIComponent((payload.d || '') + '\n\nHosted at 41 Villa, 41 Lorong H Telok Kurau, Singapore 426034.') +
+      '&location=' + encodeURIComponent('41 Villa, 41 Lorong H Telok Kurau, Singapore 426034') +
       '&sf=true&output=xml';
     document.getElementById('btnGCal').setAttribute('href', gcalUrl);
 
@@ -435,11 +435,11 @@
         pad(d.getUTCMinutes()) + '00Z';
     }
 
-    var uid = 'event-' + Date.now() + '@661estate';
+    var uid = 'event-' + Date.now() + '@41villa.com';
     var icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//The 661 Estate//EN',
+      'PRODID:-//41 Villa//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
       'BEGIN:VEVENT',
@@ -448,8 +448,8 @@
       'DTSTART:' + toICSDate(eventDate),
       'DTEND:'   + toICSDate(endDate),
       'SUMMARY:' + (payload.t || '').replace(/,/g, '\\,'),
-      'DESCRIPTION:' + ((payload.d || '') + ' — The 661 Estate, Singapore').replace(/,/g, '\\,').replace(/\n/g, '\\n'),
-      'LOCATION:The 661 Estate\\, 661 Changi Road\\, Singapore 419952',
+      'DESCRIPTION:' + ((payload.d || '') + ' — 41 Villa, 41 Lorong H Telok Kurau, Singapore 426034').replace(/,/g, '\\,').replace(/\n/g, '\\n'),
+      'LOCATION:41 Villa\\, 41 Lorong H Telok Kurau\\, Singapore 426034',
       'STATUS:CONFIRMED',
       'TRANSP:OPAQUE',
       'END:VEVENT',

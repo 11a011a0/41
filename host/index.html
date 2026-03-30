@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The 661 Estate — Create a private event invitation for your guests." />
-  <title>Create Invitation — The 661 Estate</title>
+  <meta name="description" content="41 Villa — Create a private event invitation for your guests." />
+  <title>Create Invitation — 41 Villa</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -276,7 +276,7 @@
     <div class="nav__inner">
       <a class="brand" href="../">
         <span class="brand__diamond" aria-hidden="true"></span>
-        <span>661</span>
+        <span>41</span>
       </a>
       <a class="nav__back" href="../">
         <span class="nav__back-arrow" aria-hidden="true">&#8592;</span>
@@ -291,7 +291,7 @@
       <h1 class="page-title">Create an Invitation</h1>
       <p class="page-sub">
         Fill in the event details below to generate a shareable invite link
-        for your guests at The 661 Estate.
+        for your guests at 41 Villa.
       </p>
     </div>
 
@@ -372,12 +372,15 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 The 661 Estate</p>
+    <p>&copy; <span id="hostYear"></span> 41 Villa</p>
   </footer>
 
   <script>
   (function () {
     'use strict';
+
+    var y = document.getElementById('hostYear');
+    if (y) y.textContent = String(new Date().getFullYear());
 
     /* ── CHAR COUNTER ── */
     var descEl     = document.getElementById('eventDesc');
