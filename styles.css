@@ -244,6 +244,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-direction: column;
   gap: 0;
   background: var(--white);
+  border-top: 1px solid transparent;
   padding: 0 clamp(1.25rem, 5vw, 4rem);
   max-height: 0;
   overflow: hidden;
@@ -251,9 +252,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav__drawer.is-open {
+  border-top-color: var(--border);
   max-height: 600px;
   padding: 1.5rem clamp(1.25rem, 5vw, 4rem);
-  border-top: 1px solid var(--border);
 }
 
 .nav__drawer nav {
